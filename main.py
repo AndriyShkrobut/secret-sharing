@@ -66,7 +66,7 @@ def main(args):
     else:
         with open(shares_file_path, 'r') as file:
             shares = json.load(file)
-        print(shares, type(shares))
+
         t0 = time()
         key = chosen_scheme.reconstruct(shares)
         t1 = time()
@@ -124,7 +124,8 @@ if __name__ == '__main__':
         dest='n',
         help='Кількість учасників схеми: число згенерованих ключів',
         type=int,
-        default=0
+        default=0,
+        required=True
     )
     parser.add_argument(
         '-k',
@@ -132,7 +133,7 @@ if __name__ == '__main__':
         dest='k',
         help='Кількість учасників для відновлення: число необхідних ключів для відновлення',
         type=int,
-        default=0
+        required=True
     )
     parser.add_argument(
         '--aes',

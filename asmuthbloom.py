@@ -1,4 +1,5 @@
 import sys
+import math
 
 from Crypto.Random import random
 
@@ -68,7 +69,7 @@ class AsmuthBloom(SecretSharingScheme):
         k = len(first_chunk_share)
         p = [share[0] for share in first_chunk_share]
         chunks = []
-        print(first_chunk_share, k, p)
+
         for i in range(len(shares)):
             chunks.append([])
             for [p_i, s_i] in shares[i]:
