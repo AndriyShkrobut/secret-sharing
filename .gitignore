@@ -1,0 +1,15 @@
+# Environment
+__pycache__
+!requirements.txt
+venv
+
+# IDE
+.idea
+.vscode
+
+
+# App Specific
+*.txt
+*.docx
+shares.json
+cipher*
